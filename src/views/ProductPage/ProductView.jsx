@@ -8,7 +8,7 @@ import { listDesc } from '../../components/listAsc'
 export const ProductView = () => {
     const [order, setOrder] = useState(() => listMap)
 
-    const  handleChange = (event) => {
+    function  handleChange(event)  {
         if (event.target.value == 'defaultValue') {
             setOrder(() => listMap);
 
