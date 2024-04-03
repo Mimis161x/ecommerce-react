@@ -6,9 +6,17 @@ import { listMap } from '../../components/listMap'
 import { listDesc } from '../../components/listAsc'
 
 export const ProductView = () => {
-    const [order, setOrder] = useState(() => listDesc)
+    const [order, setOrder] = useState(() => listMap)
 
-    function handleChange() {
+    const  handleChange = (event) => {
+        if (event.target.value == 'defaultValue') {
+            setOrder(() => listMap);
+
+        }
+        else if (event.target.value == 'ascending-price') {
+            setOrder(() => listDesc);
+        }
+
         return null;
     }
   return (
@@ -38,7 +46,7 @@ export const ProductView = () => {
 
     </nav>
     <main>
-        <select className="price-selector" onChange={handleChange()}>
+        <select className="price-selector" onChange={handleChange}>
             <option value="defaultValue" >default</option>
             <option value="descending-price">Descending Price </option>
             <option value="ascending-price">Ascending Price</option> 
