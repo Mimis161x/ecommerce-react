@@ -148,14 +148,14 @@ nav {
 
 .price-selector {
     height: 30Px;
-    width:40x;
+    width: 40x;
     margin: 0%;
     padding: 0px;
     display: block;
 }
 
 
-.container {
+#container {
     display: flex;
     overflow: hidden;
     flex-wrap: wrap;
@@ -167,7 +167,7 @@ nav {
     padding: 10px;
     margin: 1rem;
     width: 100%;
-    
+
 }
 
 .prodimg {
