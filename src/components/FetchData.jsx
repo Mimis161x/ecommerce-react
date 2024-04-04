@@ -23,7 +23,7 @@ export const FetchData = (props) => {
             FetchData();
 
 
-        }, []);
+        }, [func]);
 
         return (
             func(products)
