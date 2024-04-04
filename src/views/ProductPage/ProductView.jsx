@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import './product.css'
 import { Link } from 'react-router-dom'
 import { FetchData } from '../../components/FetchData'
-import { listMap } from '../../components/listMap'
-import { listDesc } from '../../components/listAsc'
+import { listMap } from '../../components/ListMap'
+import { listDesc } from '../../components/ListAsc'
 
 export const ProductView = () => {
     const [order, setOrder] = useState(() => listMap)
@@ -11,14 +11,18 @@ export const ProductView = () => {
     function  handleChange(event)  {
         if (event.target.value == 'defaultValue') {
             setOrder(() => listMap);
+            console.log('opa');
 
         }
         else if (event.target.value == 'ascending-price') {
             setOrder(() => listDesc);
+            console.log('k');
         }
 
         return null;
     }
+
+   
   return (
 
 <body>
@@ -68,6 +72,6 @@ export const ProductView = () => {
     </footer>
 
     
-</body>
+    </body>
   )
 }
